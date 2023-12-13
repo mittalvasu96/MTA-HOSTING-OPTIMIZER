@@ -17,5 +17,9 @@ jobs:
             go-version: 1.18
     
         - name: Run tests
+          env:
+            API_HOST: localhost
+            API_PORT: 5001
+            API_PATH: /mta-hosting-optimizer
           run: go test -cover ./...
         
